@@ -1,0 +1,98 @@
+.grid-container {
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    min-height: 100vh;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 5% 60% 35%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "area-1 area-2 area-3";
+  }
+
+  .area-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . ." ". . .";
+    grid-area: area-1;
+    background: #F1BD22;
+  }
+
+  .area-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . ." "content content content";
+    grid-area: area-2;
+    padding: 10px;
+    background: #46550C;
+  }
+
+  .content { grid-area: content; }
+
+  .area-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . ." "content-2 content-2 content-2";
+    grid-area: area-3;
+    padding: 10px;
+    background: #015395;
+  }
+
+  .content-2 { grid-area: content-2; }
+
+
+  @media all and (-ms-high-contrast:none) {
+    .grid-container {
+      display: -ms-grid;
+      -ms-grid-columns: 5% 60% 35%;
+      -ms-grid-rows: 1fr;
+    }
+
+    .area-1 {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
+    }
+
+    .area-2 {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+
+    .content {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+
+    .area-3 {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 1;
+    }
+
+    .content-2 {
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+
+  }
